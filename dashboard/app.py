@@ -14,7 +14,8 @@ import numpy as np
 from zoneinfo import ZoneInfo
 
 # Database directory
-DB_PATH = "data/covid.db"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, '..', 'data', 'covid.db')
 
 # Load data from DB
 @st.cache_data
